@@ -1,0 +1,3 @@
+/home/kade/CodingProjects/Pong/out/CMakeFiles/PongGame.dir
+/home/kade/CodingProjects/Pong/out/CMakeFiles/edit_cache.dir
+/home/kade/CodingProjects/Pong/out/CMakeFiles/rebuild_cache.dir
