@@ -10,37 +10,20 @@ Ball::Ball(int w, int r, int x, int y)
 
 void Ball::drawBall(SDL_Renderer *renderer)
 {
-    int diameter = (this->r * 2);
+    // Set ball color to white
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 
-    int x = (this->r - 1);
-    int y = 0;
-    int tx = 1;
-    int ty = 1;
-    int error = (tx - diameter);
-
-    while (this->x >= this->y)
+    // Draw the ball as a filled circle
+    for (int w = 0; w < this->w; w++)
     {
-        SDL_RenderDrawPoint(renderer, this->x + x, this->y - y);
-        SDL_RenderDrawPoint(renderer, this->x + x, this->y + y);
-        SDL_RenderDrawPoint(renderer, this->x - x, this->y - y);
-        SDL_RenderDrawPoint(renderer, this->x - x, this->y + y);
-        SDL_RenderDrawPoint(renderer, this->x + y, this->y - x);
-        SDL_RenderDrawPoint(renderer, this->x + y, this->y + x);
-        SDL_RenderDrawPoint(renderer, this->x - y, this->y - x);
-        SDL_RenderDrawPoint(renderer, this->x - y, this->y + x);
-
-        if (error <= 0)
+        for (int h = 0; h < this->w; h++)
         {
-            ++y;
-            error += ty;
-            ty += 2;
-        }
-
-        if (error > 0)
-        {
-            --x;
-            tx += 2;
-            error += (tx - diameter);
+            int dx = this->w / 2 - w; // horizontal offset
+            int dy = this->w / 2 - h; // vertical offset
+            if ((dx * dx + dy * dy) <= (this->r * this->r))
+            {
+                SDL_RenderDrawPoint(renderer, this->x + dx, this->y + dy);
+            }
         }
     }
 }

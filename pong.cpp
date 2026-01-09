@@ -62,7 +62,7 @@ int main(int argc, char *args[])
         }
 
         // Draw the ball
-//        ball.drawBall(renderer);
+        ball.drawBall(renderer);
 
         // Draw at end of frame
         player1.drawPlayer(renderer);
