@@ -1,6 +1,6 @@
 CMakeFiles/PongGame.dir/player.cpp.o: \
- /home/kade/CodingProjects/Pong/player.cpp /usr/include/stdc-predef.h \
- /home/kade/CodingProjects/Pong/player.hpp /usr/include/c++/15/iostream \
+ /home/r2/CodingProjects/Pong/player.cpp /usr/include/stdc-predef.h \
+ /home/r2/CodingProjects/Pong/player.hpp /usr/include/c++/15/iostream \
  /usr/include/c++/15/bits/requires_hosted.h \
  /usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \

@@ -1,6 +1,6 @@
-CMakeFiles/PongGame.dir/pong.cpp.o: \
- /home/kade/CodingProjects/Pong/pong.cpp /usr/include/stdc-predef.h \
- /usr/include/c++/15/iostream /usr/include/c++/15/bits/requires_hosted.h \
+CMakeFiles/PongGame.dir/pong.cpp.o: /home/r2/CodingProjects/Pong/pong.cpp \
+ /usr/include/stdc-predef.h /usr/include/c++/15/iostream \
+ /usr/include/c++/15/bits/requires_hosted.h \
  /usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
  /usr/include/c++/15/x86_64-redhat-linux/bits/os_defines.h \
@@ -302,5 +302,5 @@ CMakeFiles/PongGame.dir/pong.cpp.o: \
  /usr/include/SDL2/SDL_render.h /usr/include/SDL2/SDL_shape.h \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
- /usr/include/SDL2/SDL_misc.h /home/kade/CodingProjects/Pong/player.hpp \
- /home/kade/CodingProjects/Pong/ball.hpp
+ /usr/include/SDL2/SDL_misc.h /home/r2/CodingProjects/Pong/player.hpp \
+ /home/r2/CodingProjects/Pong/ball.hpp

@@ -68,6 +68,9 @@ int main(int argc, char *args[])
         player1.drawPlayer(renderer);
         player2.drawPlayer(renderer);
 
+	// Update ball location
+	ball.updatePosition(1, 0);
+
         // Show the new frame
         SDL_RenderPresent(renderer);
 

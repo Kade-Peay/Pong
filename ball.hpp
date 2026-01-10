@@ -13,5 +13,12 @@ private:
 public:
     Ball(int w, int r, int x, int y);
 
+    // Getters
+    int getW();
+    int getR();
+    int getX();
+    int getY();
+
     void drawBall(SDL_Renderer *renderer);
+    void updatePosition(int deltaX, int deltaY);
 };

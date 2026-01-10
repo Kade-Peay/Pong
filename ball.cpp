@@ -8,6 +8,30 @@ Ball::Ball(int w, int r, int x, int y)
     this->y = y;
 }
 
+int Ball::getW() 
+{
+    return this->w;
+}
+
+
+int Ball::getR() 
+{
+    return this->r;
+}
+
+
+int Ball::getX() 
+{
+    return this->x;
+}
+
+
+int Ball::getY() 
+{
+    return this->y;
+}
+
+
 void Ball::drawBall(SDL_Renderer *renderer)
 {
     // Set ball color to white
@@ -26,4 +50,10 @@ void Ball::drawBall(SDL_Renderer *renderer)
             }
         }
     }
+}
+
+void Ball::updatePosition(int deltaX, int deltaY) 
+{
+    this->x += deltaX;
+    this->y += deltaY;
 }
