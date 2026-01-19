@@ -20,6 +20,10 @@ int main(int argc, char *args[])
 
     // Create the Ball
     Ball ball(20, 5, 320, 240);
+    
+    // Update positions for X and Y
+    int dX = 1; // Start with moving to the right
+    int dY;
 
     // Start the main loop
     bool running = true;
@@ -68,8 +72,16 @@ int main(int argc, char *args[])
         player1.drawPlayer(renderer);
         player2.drawPlayer(renderer);
 
-	// Update ball location
-	ball.updatePosition(1, 0);
+        // Check for collisions
+        if(ball.getX() < 0 || ball.getX() >= 640) { 
+            dX *= -1;
+        } 
+        if(ball.getY() < 0 || ball.getY() >= 480) {  
+            dY *= -1;
+        }
+
+        // Update Ball position
+        ball.updatePosition(dX, dY);
 
         // Show the new frame
         SDL_RenderPresent(renderer);

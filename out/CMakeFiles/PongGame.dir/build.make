@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/r2/CodingProjects/Pong
+CMAKE_SOURCE_DIR = /home/kade/CodingProjects/Pong
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/r2/CodingProjects/Pong/out
+CMAKE_BINARY_DIR = /home/kade/CodingProjects/Pong/out
 
 # Include any dependencies generated for this target.
 include CMakeFiles/PongGame.dir/depend.make
@@ -73,46 +73,46 @@ CMakeFiles/PongGame.dir/codegen:
 .PHONY : CMakeFiles/PongGame.dir/codegen
 
 CMakeFiles/PongGame.dir/ball.cpp.o: CMakeFiles/PongGame.dir/flags.make
-CMakeFiles/PongGame.dir/ball.cpp.o: /home/r2/CodingProjects/Pong/ball.cpp
+CMakeFiles/PongGame.dir/ball.cpp.o: /home/kade/CodingProjects/Pong/ball.cpp
 CMakeFiles/PongGame.dir/ball.cpp.o: CMakeFiles/PongGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/r2/CodingProjects/Pong/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PongGame.dir/ball.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PongGame.dir/ball.cpp.o -MF CMakeFiles/PongGame.dir/ball.cpp.o.d -o CMakeFiles/PongGame.dir/ball.cpp.o -c /home/r2/CodingProjects/Pong/ball.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kade/CodingProjects/Pong/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PongGame.dir/ball.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PongGame.dir/ball.cpp.o -MF CMakeFiles/PongGame.dir/ball.cpp.o.d -o CMakeFiles/PongGame.dir/ball.cpp.o -c /home/kade/CodingProjects/Pong/ball.cpp
 
 CMakeFiles/PongGame.dir/ball.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PongGame.dir/ball.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/r2/CodingProjects/Pong/ball.cpp > CMakeFiles/PongGame.dir/ball.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kade/CodingProjects/Pong/ball.cpp > CMakeFiles/PongGame.dir/ball.cpp.i
 
 CMakeFiles/PongGame.dir/ball.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PongGame.dir/ball.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/r2/CodingProjects/Pong/ball.cpp -o CMakeFiles/PongGame.dir/ball.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kade/CodingProjects/Pong/ball.cpp -o CMakeFiles/PongGame.dir/ball.cpp.s
 
 CMakeFiles/PongGame.dir/player.cpp.o: CMakeFiles/PongGame.dir/flags.make
-CMakeFiles/PongGame.dir/player.cpp.o: /home/r2/CodingProjects/Pong/player.cpp
+CMakeFiles/PongGame.dir/player.cpp.o: /home/kade/CodingProjects/Pong/player.cpp
 CMakeFiles/PongGame.dir/player.cpp.o: CMakeFiles/PongGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/r2/CodingProjects/Pong/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PongGame.dir/player.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PongGame.dir/player.cpp.o -MF CMakeFiles/PongGame.dir/player.cpp.o.d -o CMakeFiles/PongGame.dir/player.cpp.o -c /home/r2/CodingProjects/Pong/player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kade/CodingProjects/Pong/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PongGame.dir/player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PongGame.dir/player.cpp.o -MF CMakeFiles/PongGame.dir/player.cpp.o.d -o CMakeFiles/PongGame.dir/player.cpp.o -c /home/kade/CodingProjects/Pong/player.cpp
 
 CMakeFiles/PongGame.dir/player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PongGame.dir/player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/r2/CodingProjects/Pong/player.cpp > CMakeFiles/PongGame.dir/player.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kade/CodingProjects/Pong/player.cpp > CMakeFiles/PongGame.dir/player.cpp.i
 
 CMakeFiles/PongGame.dir/player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PongGame.dir/player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/r2/CodingProjects/Pong/player.cpp -o CMakeFiles/PongGame.dir/player.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kade/CodingProjects/Pong/player.cpp -o CMakeFiles/PongGame.dir/player.cpp.s
 
 CMakeFiles/PongGame.dir/pong.cpp.o: CMakeFiles/PongGame.dir/flags.make
-CMakeFiles/PongGame.dir/pong.cpp.o: /home/r2/CodingProjects/Pong/pong.cpp
+CMakeFiles/PongGame.dir/pong.cpp.o: /home/kade/CodingProjects/Pong/pong.cpp
 CMakeFiles/PongGame.dir/pong.cpp.o: CMakeFiles/PongGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/r2/CodingProjects/Pong/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PongGame.dir/pong.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PongGame.dir/pong.cpp.o -MF CMakeFiles/PongGame.dir/pong.cpp.o.d -o CMakeFiles/PongGame.dir/pong.cpp.o -c /home/r2/CodingProjects/Pong/pong.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kade/CodingProjects/Pong/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PongGame.dir/pong.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PongGame.dir/pong.cpp.o -MF CMakeFiles/PongGame.dir/pong.cpp.o.d -o CMakeFiles/PongGame.dir/pong.cpp.o -c /home/kade/CodingProjects/Pong/pong.cpp
 
 CMakeFiles/PongGame.dir/pong.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PongGame.dir/pong.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/r2/CodingProjects/Pong/pong.cpp > CMakeFiles/PongGame.dir/pong.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kade/CodingProjects/Pong/pong.cpp > CMakeFiles/PongGame.dir/pong.cpp.i
 
 CMakeFiles/PongGame.dir/pong.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PongGame.dir/pong.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/r2/CodingProjects/Pong/pong.cpp -o CMakeFiles/PongGame.dir/pong.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kade/CodingProjects/Pong/pong.cpp -o CMakeFiles/PongGame.dir/pong.cpp.s
 
 # Object files for target PongGame
 PongGame_OBJECTS = \
@@ -130,7 +130,7 @@ PongGame: CMakeFiles/PongGame.dir/build.make
 PongGame: CMakeFiles/PongGame.dir/compiler_depend.ts
 PongGame: /usr/lib64/libSDL2-2.0.so.0.3200.56
 PongGame: CMakeFiles/PongGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/r2/CodingProjects/Pong/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable PongGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kade/CodingProjects/Pong/out/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable PongGame"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PongGame.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -142,6 +142,6 @@ CMakeFiles/PongGame.dir/clean:
 .PHONY : CMakeFiles/PongGame.dir/clean
 
 CMakeFiles/PongGame.dir/depend:
-	cd /home/r2/CodingProjects/Pong/out && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/r2/CodingProjects/Pong /home/r2/CodingProjects/Pong /home/r2/CodingProjects/Pong/out /home/r2/CodingProjects/Pong/out /home/r2/CodingProjects/Pong/out/CMakeFiles/PongGame.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/kade/CodingProjects/Pong/out && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kade/CodingProjects/Pong /home/kade/CodingProjects/Pong /home/kade/CodingProjects/Pong/out /home/kade/CodingProjects/Pong/out /home/kade/CodingProjects/Pong/out/CMakeFiles/PongGame.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/PongGame.dir/depend
 
