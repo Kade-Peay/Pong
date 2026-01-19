@@ -9,6 +9,23 @@ Player::Player(int playerNum, int w, int h, int x, int y)
     this->y = y;
 }
 
+// Getters
+int Player::getW() {
+    return this->w;
+}
+
+int Player::getH() {
+    return this->h;
+}
+
+int Player::getX() {
+    return this->x;
+}
+
+int Player::getY() {
+    return this->y;
+}
+
 void Player::moveUp()
 {
     // Moving up should decrease the y coordinate in SDL's coordinate system

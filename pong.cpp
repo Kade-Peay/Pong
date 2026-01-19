@@ -20,10 +20,10 @@ int main(int argc, char *args[])
 
     // Create the Ball
     Ball ball(20, 5, 320, 240);
-    
+
     // Update positions for X and Y
     int dX = 1; // Start with moving to the right
-    int dY;
+    int dY = 1;
 
     // Start the main loop
     bool running = true;
@@ -72,12 +72,28 @@ int main(int argc, char *args[])
         player1.drawPlayer(renderer);
         player2.drawPlayer(renderer);
 
-        // Check for collisions
-        if(ball.getX() < 0 || ball.getX() >= 640) { 
+        // Check for wall collisions
+        if (ball.getX() < 0 || ball.getX() >= 640)
+        { // Horizontal
             dX *= -1;
-        } 
-        if(ball.getY() < 0 || ball.getY() >= 480) {  
+        }
+        if (ball.getY() < 0 || ball.getY() >= 480)
+        { // Vertical
             dY *= -1;
+        }
+
+        // Check for Paddle Collisions
+        if (ball.getX() <= player1.getX() + player1.getW() &&
+            ball.getY() + ball.getW() >= player1.getY() &&
+            ball.getY() <= player1.getY() + player1.getH())
+        {
+            dX *= -1;
+        }
+        if (ball.getX() + ball.getW() >= player2.getX() &&
+            ball.getY() + ball.getW() >= player2.getY() &&
+            ball.getY() <= player2.getY() + player2.getH())
+        {
+            dX *= -1;
         }
 
         // Update Ball position
