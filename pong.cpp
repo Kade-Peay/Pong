@@ -22,8 +22,8 @@ int main(int argc, char *args[])
     Ball ball(20, 5, 320, 240);
 
     // Update positions for X and Y
-    int dX = 1; // Start with moving to the right
-    int dY = 1;
+    int dX = 2; // Start with moving to the right
+    int dY = 1; // Small downward angle as well
 
     // Start the main loop
     bool running = true;
@@ -89,7 +89,7 @@ int main(int argc, char *args[])
         {
             dX *= -1;
         }
-        if (ball.getX() + ball.getW() >= player2.getX() &&
+        if (ball.getX() + ball.getW() >= player2.getX() + player2.getW() && // Adjust by width for rendering
             ball.getY() + ball.getW() >= player2.getY() &&
             ball.getY() <= player2.getY() + player2.getH())
         {
