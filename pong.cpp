@@ -104,7 +104,7 @@ int main(int argc, char *args[])
             // Reset Ball position
             ball.setX(ballStartingX);
             ball.setY(ballStartingY);
-            dX = 2; // Reset direction
+            dX = -2; // Reset direction
             dY = 1;
         }
 
