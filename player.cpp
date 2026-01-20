@@ -7,6 +7,7 @@ Player::Player(int playerNum, int w, int h, int x, int y)
     this->h = h;
     this->x = x;
     this->y = y;
+    this->score = 0;
 }
 
 // Getters
@@ -24,6 +25,10 @@ int Player::getX() {
 
 int Player::getY() {
     return this->y;
+}
+
+int Player::getScore() {
+    return this->score;
 }
 
 void Player::moveUp()
@@ -47,4 +52,8 @@ void Player::drawPlayer(SDL_Renderer *renderer)
     box.y = this->y;
     SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
     SDL_RenderFillRect(renderer, &box);
+}
+
+void Player::updateScore() {
+    this->score += 1;
 }

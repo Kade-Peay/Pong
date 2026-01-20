@@ -28,6 +28,15 @@ int Ball::getY()
     return this->y;
 }
 
+// Setters
+int Ball::setX(int x) {
+    return this->x = x;
+}
+
+int Ball::setY(int y) {
+    return this->y = y;
+}
+
 void Ball::drawBall(SDL_Renderer *renderer)
 {
     // Set ball color to white

@@ -8,10 +8,14 @@ int main(int argc, char *args[])
     // Just print something to the screen so I know it is working
     std::cout << "Starting..." << std::endl;
 
+    // Screen Size
+    const int screenW = 640;
+    const int screenH = 480;
+
     // A lot of initializing...
     SDL_Init(SDL_INIT_EVERYTHING);
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "1");
-    SDL_Window *window = SDL_CreateWindow("Window", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 640, 480, SDL_WINDOW_SHOWN);
+    SDL_Window *window = SDL_CreateWindow("Window", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, screenW, screenH, SDL_WINDOW_SHOWN);
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
     // Create Players
@@ -19,7 +23,9 @@ int main(int argc, char *args[])
     Player player2(2, 20, 100, 580, 190);
 
     // Create the Ball
-    Ball ball(20, 5, 320, 240);
+    int ballStartingX = screenW / 2;
+    int ballStartingY = screenH / 2;
+    Ball ball(20, 5, ballStartingX, ballStartingY);
 
     // Update positions for X and Y
     int dX = 2; // Start with moving to the right
@@ -73,13 +79,33 @@ int main(int argc, char *args[])
         player2.drawPlayer(renderer);
 
         // Check for wall collisions
-        if (ball.getX() < 0 || ball.getX() >= 640)
-        { // Horizontal
-            dX *= -1;
-        }
-        if (ball.getY() < 0 || ball.getY() >= 480)
-        { // Vertical
+        if (ball.getY() < 0 || ball.getY() >= screenH)
+        {
             dY *= -1;
+        }
+
+        // Update scores if making it past the paddle
+        if (ball.getX() < 0) // Left side (Player 2 point)
+        {
+            player2.updateScore();
+            std::cout << "Player 2 Score: " << player2.getScore() << std::endl;
+
+            // Reset Ball position
+            ball.setX(ballStartingX);
+            ball.setY(ballStartingY);
+            dX = 2; // Reset direction
+            dY = 1;
+        }
+        if (ball.getX() >= screenW) // Right side (Player 1 point)
+        {
+            player1.updateScore();
+            std::cout << "Player 1 Score: " << player1.getScore() << std::endl;
+
+            // Reset Ball position
+            ball.setX(ballStartingX);
+            ball.setY(ballStartingY);
+            dX = 2; // Reset direction
+            dY = 1;
         }
 
         // Check for Paddle Collisions
