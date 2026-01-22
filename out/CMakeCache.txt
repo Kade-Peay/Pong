@@ -201,6 +201,15 @@ PongGame_SOURCE_DIR:STATIC=/home/kade/CodingProjects/Pong
 //The directory containing a CMake configuration file for SDL2.
 SDL2_DIR:PATH=/usr/lib64/cmake/SDL2
 
+//The directory containing a CMake configuration file for SDL2_ttf.
+SDL2_ttf_DIR:PATH=/usr/lib64/cmake/SDL2_ttf
+
+//Path to a file.
+SDL_TTF_INCLUDE_DIR:PATH=SDL_TTF_INCLUDE_DIR-NOTFOUND
+
+//Path to a library.
+SDL_TTF_LIBRARY:FILEPATH=SDL_TTF_LIBRARY-NOTFOUND
+
 
 ########################
 # INTERNAL cache entries

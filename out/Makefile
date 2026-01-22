@@ -201,6 +201,30 @@ pong.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongGame.dir/build.make CMakeFiles/PongGame.dir/pong.cpp.s
 .PHONY : pong.cpp.s
 
+scoreboard.o: scoreboard.cpp.o
+.PHONY : scoreboard.o
+
+# target to build an object file
+scoreboard.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongGame.dir/build.make CMakeFiles/PongGame.dir/scoreboard.cpp.o
+.PHONY : scoreboard.cpp.o
+
+scoreboard.i: scoreboard.cpp.i
+.PHONY : scoreboard.i
+
+# target to preprocess a source file
+scoreboard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongGame.dir/build.make CMakeFiles/PongGame.dir/scoreboard.cpp.i
+.PHONY : scoreboard.cpp.i
+
+scoreboard.s: scoreboard.cpp.s
+.PHONY : scoreboard.s
+
+# target to generate assembly for a file
+scoreboard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PongGame.dir/build.make CMakeFiles/PongGame.dir/scoreboard.cpp.s
+.PHONY : scoreboard.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,6 +243,9 @@ help:
 	@echo "... pong.o"
 	@echo "... pong.i"
 	@echo "... pong.s"
+	@echo "... scoreboard.o"
+	@echo "... scoreboard.i"
+	@echo "... scoreboard.s"
 .PHONY : help
 
 
