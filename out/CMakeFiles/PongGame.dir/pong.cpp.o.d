@@ -307,7 +307,8 @@ CMakeFiles/PongGame.dir/pong.cpp.o: \
  /usr/include/c++/15/bits/stl_uninitialized.h \
  /usr/include/c++/15/bits/stl_vector.h \
  /usr/include/c++/15/bits/stl_bvector.h \
- /usr/include/c++/15/bits/vector.tcc \
+ /usr/include/c++/15/bits/vector.tcc /usr/include/c++/15/utility \
+ /usr/include/c++/15/bits/stl_relops.h \
  /home/kade/CodingProjects/Pong/player.hpp \
  /home/kade/CodingProjects/Pong/ball.hpp \
  /home/kade/CodingProjects/Pong/scoreboard.hpp

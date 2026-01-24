@@ -2,6 +2,7 @@
 #include <SDL2/SDL.h>
 #include <SDL_ttf.h>
 #include <vector>
+#include <utility>
 #include "player.hpp"
 #include "ball.hpp"
 #include "scoreboard.hpp"
@@ -41,12 +42,10 @@ int main(int argc, char *args[])
     Ball ball(20, 5, ballStartingX, ballStartingY);
 
     // Update positions for X and Y
-    int dX = 2; // Start with moving to the right
-    int dY = 1; // Small downward angle as well
-    // TODO: std::vector<std::vector<float>> direction = {{2.0, 1.0}}; 
+    std::pair<float, float> direction = {2.0f, 1.0f};
 
     // Create the scoreboard
-    Scoreboard scoarboard(0, 0);
+    //Scoreboard scoarboard(0, 0);
 
     // Start the main loop
     bool running = true;
@@ -98,7 +97,7 @@ int main(int argc, char *args[])
         // Check for wall collisions
         if (ball.getY() < 0 || ball.getY() >= screenH)
         {
-            dY *= -1;
+            direction.second *= -1.0f;
         }
 
         //
@@ -112,8 +111,8 @@ int main(int argc, char *args[])
             // Reset Ball position
             ball.setX(ballStartingX);
             ball.setY(ballStartingY);
-            dX = 2; // Reset direction
-            dY = 1;
+            direction.first = 2.0f;
+            direction.second = 1.0f;
         }
         if (ball.getX() >= screenW) // Right side (Player 1 point)
         {
@@ -123,26 +122,29 @@ int main(int argc, char *args[])
             // Reset Ball position
             ball.setX(ballStartingX);
             ball.setY(ballStartingY);
-            dX = -2; // Reset direction
-            dY = 1;
+            direction.first = -2.0f;
+            direction.second = 1.0f;
         }
 
         // Check for Paddle Collisions
+        // TODO: Ball occasionally gets stuck behind paddle
         if (ball.getX() <= player1.getX() + player1.getW() &&
             ball.getY() + ball.getW() >= player1.getY() &&
             ball.getY() <= player1.getY() + player1.getH())
         {
-            dX *= -1;
+            direction.first += 0.1f;
+            direction.first *= -1.0f;
         }
         if (ball.getX() + ball.getW() >= player2.getX() + player2.getW() && // Adjust by width for rendering
             ball.getY() + ball.getW() >= player2.getY() &&
             ball.getY() <= player2.getY() + player2.getH())
         {
-            dX *= -1;
+            direction.first += 1.0f;
+            direction.first *= -1.0f;
         }
 
         // Update Ball position
-        ball.updatePosition(dX, dY);
+        ball.updatePosition(direction.first, direction.second);
 
        
         // Show the new frame
