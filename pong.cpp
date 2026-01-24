@@ -106,7 +106,16 @@ int main(int argc, char *args[])
         if (ball.getX() < 0) // Left side (Player 2 point)
         {
             player2.updateScore();
-            std::cout << "Player 2 Score: " << player2.getScore() << std::endl;
+            if(player2.getScore() >= 5) 
+            {
+                std::cout << "Player 2 Wins!!" << std::endl;
+                running = false;
+                break;
+            }
+            else
+            {
+                std::cout << "Player 2 Score: " << player2.getScore() << std::endl;
+            }
 
             // Reset Ball position
             ball.setX(ballStartingX);
@@ -117,7 +126,16 @@ int main(int argc, char *args[])
         if (ball.getX() >= screenW) // Right side (Player 1 point)
         {
             player1.updateScore();
-            std::cout << "Player 1 Score: " << player1.getScore() << std::endl;
+            if(player1.getScore() >= 5)
+            {   
+                std::cout << "Player 1 Wins!!" << std::endl;
+                running = false;
+                break;
+            }
+            else    
+            {
+                std::cout << "Player 1 Score: " << player1.getScore() << std::endl;
+            }
 
             // Reset Ball position
             ball.setX(ballStartingX);
