@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/kade/CodingProjects/Pong/build",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -o CMakeFiles/PongGame.dir/ball.cpp.o -c /home/kade/CodingProjects/Pong/ball.cpp",
+  "file": "/home/kade/CodingProjects/Pong/ball.cpp",
+  "output": "CMakeFiles/PongGame.dir/ball.cpp.o"
+},
+{
+  "directory": "/home/kade/CodingProjects/Pong/build",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -o CMakeFiles/PongGame.dir/player.cpp.o -c /home/kade/CodingProjects/Pong/player.cpp",
+  "file": "/home/kade/CodingProjects/Pong/player.cpp",
+  "output": "CMakeFiles/PongGame.dir/player.cpp.o"
+},
+{
+  "directory": "/home/kade/CodingProjects/Pong/build",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -o CMakeFiles/PongGame.dir/pong.cpp.o -c /home/kade/CodingProjects/Pong/pong.cpp",
+  "file": "/home/kade/CodingProjects/Pong/pong.cpp",
+  "output": "CMakeFiles/PongGame.dir/pong.cpp.o"
+},
+{
+  "directory": "/home/kade/CodingProjects/Pong/build",
+  "command": "/usr/bin/c++  -isystem /usr/include/SDL2 -g -o CMakeFiles/PongGame.dir/scoreboard.cpp.o -c /home/kade/CodingProjects/Pong/scoreboard.cpp",
+  "file": "/home/kade/CodingProjects/Pong/scoreboard.cpp",
+  "output": "CMakeFiles/PongGame.dir/scoreboard.cpp.o"
+}
+]

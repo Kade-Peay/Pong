@@ -3,6 +3,7 @@
 #include <SDL_ttf.h>
 #include <vector>
 #include <utility>
+#include <string>
 #include "player.hpp"
 #include "ball.hpp"
 #include "scoreboard.hpp"
@@ -45,7 +46,7 @@ int main(int argc, char *args[])
     std::pair<float, float> direction = {2.0f, 1.0f};
 
     // Create the scoreboard
-    //Scoreboard scoarboard(0, 0);
+    Scoreboard scoreboard("0", "0");
 
     // Start the main loop
     bool running = true;
@@ -113,8 +114,8 @@ int main(int argc, char *args[])
                 break;
             }
             else
-            {
-                std::cout << "Player 2 Score: " << player2.getScore() << std::endl;
+            { 
+                scoreboard.showScores(std::to_string(player1.getScore()), std::to_string(player2.getScore()));
             }
 
             // Reset Ball position
@@ -134,7 +135,7 @@ int main(int argc, char *args[])
             }
             else    
             {
-                std::cout << "Player 1 Score: " << player1.getScore() << std::endl;
+                scoreboard.showScores(std::to_string(player1.getScore()), std::to_string(player2.getScore()));
             }
 
             // Reset Ball position
@@ -150,14 +151,16 @@ int main(int argc, char *args[])
             ball.getY() + ball.getW() >= player1.getY() &&
             ball.getY() <= player1.getY() + player1.getH())
         {
-            direction.first += 0.1f;
+//            direction.first += 0.1f;
+//            direction.second += 0.01f;
             direction.first *= -1.0f;
         }
         if (ball.getX() + ball.getW() >= player2.getX() + player2.getW() && // Adjust by width for rendering
             ball.getY() + ball.getW() >= player2.getY() &&
             ball.getY() <= player2.getY() + player2.getH())
         {
-            direction.first += 1.0f;
+//            direction.first += 0.1f;
+//            direction.second += 0.01f;
             direction.first *= -1.0f;
         }
 

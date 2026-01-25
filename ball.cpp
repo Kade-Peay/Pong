@@ -29,11 +29,13 @@ int Ball::getY()
 }
 
 // Setters
-int Ball::setX(int x) {
+int Ball::setX(int x)
+{
     return this->x = x;
 }
 
-int Ball::setY(int y) {
+int Ball::setY(int y)
+{
     return this->y = y;
 }
 
