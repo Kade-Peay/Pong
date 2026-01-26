@@ -151,17 +151,21 @@ int main(int argc, char *args[])
             ball.getY() + ball.getW() >= player1.getY() &&
             ball.getY() <= player1.getY() + player1.getH())
         {
-//            direction.first += 0.1f;
-//            direction.second += 0.01f;
+            direction.first -= 0.2f;
+            direction.second -= 0.01f;
             direction.first *= -1.0f;
+
+            // std::cout << "New direction: " << std::to_string(direction.first) << ", " << std::to_string(direction.second) << std::endl;
         }
         if (ball.getX() + ball.getW() >= player2.getX() + player2.getW() && // Adjust by width for rendering
             ball.getY() + ball.getW() >= player2.getY() &&
             ball.getY() <= player2.getY() + player2.getH())
         {
-//            direction.first += 0.1f;
-//            direction.second += 0.01f;
+            direction.first += 0.2f;
+            direction.second += 0.01f;
             direction.first *= -1.0f;
+
+            // std::cout << "New direction: " << std::to_string(direction.first) << ", " << std::to_string(direction.second) << std::endl;
         }
 
         // Update Ball position

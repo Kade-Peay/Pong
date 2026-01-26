@@ -6,8 +6,10 @@ Scoreboard::Scoreboard(std::string player1Score, std::string player2Score)
     this->player2Score = player2Score;
 }
 
-void Scoreboard::showScores(std::string player1Score, std::string player2Score) 
+void Scoreboard::showScores(std::string player1Score, std::string player2Score)
 {
-    std::cout << std::endl << "Player 1: " << player1Score << std::endl << "Player 2: " << player2Score << std::endl; 
-}
+    std::cout << std::endl
+              << "Player 1: " << player1Score << std::endl
+              << "Player 2: " << player2Score << std::endl;
 
+}
